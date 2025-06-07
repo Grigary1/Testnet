@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-import React, { FC } from 'react';
+import type { FC } from 'react';
 import LayerButton from '../components/LayerButton';
 import SearchBar from '../components/SearchBar';
 import Cards from '../components/Cards';
