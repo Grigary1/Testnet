@@ -1,12 +1,8 @@
-
 import type { FC } from 'react';
 
 interface ProgressCardProps {
-
   tasksCount: number;
-
   progress: number;
-
   title?: string;
 }
 
@@ -22,15 +18,15 @@ const Cards: FC<ProgressCardProps> = ({
     <div
       className="relative w-full bg-white border-2 border-black rounded-md shadow p-4 pr-12
         transform transition-transform duration-300 ease-in-out hover:scale-105
-        flex flex-col justify-between overflow-hidden h-36"
+        flex flex-col justify-between h-36"
     >
       {/* Completed Sidebar */}
       {isComplete && (
         <div
-          className="absolute top-0 right-0 h-full w-8 bg-green-500 rounded-tr-md rounded-br-md flex items-center justify-center"
-          style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}
+        className="absolute top-0 right-0 h-full w-8 bg-green-500 rounded-tr-md rounded-br-md flex items-center justify-center z-10"
+        style={{ writingMode: 'vertical-rl', textOrientation: 'upright' }}
         >
-          <span className="text-[10px] font-bold text-white">COMPLETED</span>
+          <span className="text-[10px] font-bold text-black bg-green-500 sm:text-white sm:bg-green-500">COMPLETED</span>
         </div>
       )}
 
