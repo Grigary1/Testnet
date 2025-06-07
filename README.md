@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# Project Title
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Testnet
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Node.js (v14 or later)
+* npm (v6 or later) or Yarn (v1.22 or later)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Follow these steps to install dependencies, run the development server, and build for production.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Grigary1/Testnet.git
+cd your-repo
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Using npm:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+Or using Yarn:
+
+```bash
+yarn install
+```
+
+### 3. Run the development server
+
+This will start Vite's dev server, typically on `http://localhost:5173/`.
+
+Using npm:
+
+```bash
+npm run dev
+```
+
+Or using Yarn:
+
+```bash
+yarn dev
+```
+
+### 4. Open in Browser
+
+Navigate to `http://localhost:5173/` to see your app in action. The server supports hot module replacement (HMR), so changes reflect instantly.
+
+### 5. Build for Production
+
+To generate optimized, minified assets for production:
+
+Using npm:
+
+```bash
+npm run build
+```
+
+Or using Yarn:
+
+```bash
+yarn build
+```
+
+This creates a `dist` folder with your compiled app.
+
+### 6. Preview the Production Build
+
+After building, you can preview the production bundle locally:
+
+Using npm:
+
+```bash
+npm run serve
+```
+
+Or using Yarn:
+
+```bash
+yarn serve
+```
+
+This serves the contents of `dist` at `http://localhost:4173/` (or another available port).
+
+## Additional Scripts
+
+* **Linting**: `npm run lint` or `yarn lint`
+* **Format code**: `npm run format` or `yarn format`
+
+## Project Structure
+
+```
+├── public/           # Static assets
+├── src/              # Source files
+│   ├── assets/       # Images, fonts, etc.
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Page-level components
+│   ├── App.tsx       # Root component
+│   └── main.tsx      # Entry point
+├── index.html        # HTML template
+├── tsconfig.json     # TypeScript configuration
+├── vite.config.ts    # Vite configuration
+├── package.json      # npm scripts & dependencies
+└── README.md         # Project documentation
+```
+
+## Customization
+
+* Tailwind CSS: configure in `tailwind.config.js`
+* Environment variables: add to `.env` files
+
