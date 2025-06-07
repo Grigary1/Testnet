@@ -26,7 +26,7 @@ const Home: FC = () => {
 
   return (
     <div className="flex items-center justify-center bg-gray-50 min-h-screen px-4 py-8">
-      <div className="w-full max-w-[80%] bg-white shadow-lg rounded-2xl p-4 sm:p-6 lg:p-8">
+      <div className="w-full md:max-w-[80%] bg-white shadow-lg rounded-2xl p-4 sm:p-6 lg:p-8">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           {/* Title */}
@@ -38,7 +38,7 @@ const Home: FC = () => {
           </div>
           {/* Buttons */}
           <div className="flex flex-col space-y-2 sm:space-y-4">
-            <button className="px-4 py-2 border-2 border-gray-800 rounded-md hover:bg-gray-100 font-semibold">
+            <button className="px-4 py-2 border-2 border-gray-800 rounded-md hover:bg-gray-100 font-semibold mb-2">
               ADD YOUR GRIND
             </button>
             <button className="px-4 py-2 border-2 border-gray-800 rounded-md hover:bg-gray-100 font-semibold">
